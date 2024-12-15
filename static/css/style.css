@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #2196f3;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #bbdefb;
+}
+
+/* Container */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Video Stream Frame */
+.canvas-frame {
+    border: 5px solid #2196f3;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 900px;
+    background-color: #f3f3f3;
+}
+
+.canvas-frame img {
+    width: 100%;
+    border-radius: 15px;
+    animation: fadeIn 2s;
+}
+
+/* Toolbar Styling */
+.toolbar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tool-button {
+    padding: 10px 20px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s, background 0.3s ease;
+}
+
+.tool-button:hover {
+    background: #1976d2;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    background: #1976d2;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

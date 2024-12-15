@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Drawing Canvas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AI Canvas</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="video-container">
+            <h1>Draw Your Masterpiece!</h1>
+            <div class="canvas-frame">
+                <img src="{{ url_for('video_feed') }}" alt="Video Stream">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 AI Canvas | Powered by Flask & Mediapipe</p>
+    </footer>
+</body>
+</html>
+
