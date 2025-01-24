@@ -1,14 +1,22 @@
-import cv2
+import cv2  # type: ignore
 import mediapipe as mp
 import numpy as np
 from flask import Flask, render_template, Response
 from PIL import Image
-import google.generativeai as genai
-import os
+import google.generativeai as genai # type: ignore
+from dotenv import load_dotenv # type: ignore
+import os # type: ignore
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Google Generative AI Setup
-genai.configure(api_key="AIzaSyBIoFP2jhaE60HP6Jp8G9QM4RI5Tt-okGU")  # Replace with your Google Gemini API key
-model = genai.GenerativeModel('gemini-1.5-flash')
+api_key = os.getenv("GENAI_API_KEY")
+if api_key:
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel('gemini-1.5-flash')
+else:
+    raise ValueError("API key for Google Generative AI is not set. Please check the .env file.")
 
 # Brush and Eraser Sizes
 brushThickness = 25
@@ -18,22 +26,12 @@ eraserThickness = 100
 cap = cv2.VideoCapture(0)
 cap.set(3, 1280)  # Width
 cap.set(4, 720)  # Height
-image_folder_path = "Air_canavs_images"  # Overlay images folder
-myList = os.listdir(image_folder_path)
-print(myList)
 
-overlay = []
-for impath in myList:
-    image = cv2.imread(f'{image_folder_path}/{impath}')
-    overlay.append(image)
+#header iamge
+image_folder_path = "Air_canavs_images"  
+header = cv2.imread(f'{image_folder_path}/1.png')
 
-header = overlay[0]
-
-# Initialize VideoWriter for recording (MP4 format)
-output_file = "C:\\Users\\sajal dhuriya\\OneDrive\\Desktop\\output.mp4"
-drawing_save_path = "C:\\Users\\sajal dhuriya\\OneDrive\\Desktop\\air_image\\im.png"  # Save path for the drawing
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter(output_file, fourcc, 20.0, (1280, 720))
+###tested
 
 # Mediapipe Hands Setup
 mpHands = mp.solutions.hands
