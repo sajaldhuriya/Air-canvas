@@ -1,8 +1,8 @@
 import cv2  # type: ignore
-import mediapipe as mp
-import numpy as np
-from flask import Flask, render_template, Response
-from PIL import Image
+import mediapipe as mp # type: ignore
+import numpy as np # type: ignore
+from flask import Flask, render_template, Response # type: ignore
+from PIL import Image # type: ignore
 import google.generativeai as genai # type: ignore
 from dotenv import load_dotenv # type: ignore
 import os # type: ignore
@@ -30,8 +30,6 @@ cap.set(4, 720)  # Height
 #header iamge
 image_folder_path = "Air_canavs_images"  
 header = cv2.imread(f'{image_folder_path}/1.png')
-
-###tested
 
 # Mediapipe Hands Setup
 mpHands = mp.solutions.hands
@@ -104,10 +102,11 @@ def gen_frames():
         if len(lmList) != 0:
             x1, y1 = lmList[8][1], lmList[8][2]  # Index finger tip
             x2, y2 = lmList[12][1], lmList[12][2]  # Middle finger tip
-
+            
+            #selection mode
             if y1 < lmList[7][2] and y2 < lmList[11][2]:
                 xp, yp = 0, 0
-                cv2.rectangle(img, (min(x1, x2), min(y1, y2)), (max(x1, x2), max(y1, y2)), (255, 0, 255), cv2.FILLED)
+                cv2.rectangle(img, (min(x1, x2), min(y1, y2)), (max(x1, x2), max(y1, y2)), selected_color_rgb, cv2.FILLED)
 
                 # Color selection logic
                 for color_name, ((x_start, y_start), (x_end, y_end), color) in color_boxes.items():
@@ -115,6 +114,8 @@ def gen_frames():
                         selected_color = color_name
                         selected_color_rgb = color
                         cv2.rectangle(img, (x_start, y_start), (x_end, y_end), color, cv2.FILLED)
+
+                        #tested
 
                 # Brush thickness selection logic with borders
                 for thickness_name, (box_start, box_end) in thickness_boxes.items():
