@@ -115,8 +115,6 @@ def gen_frames():
                         selected_color_rgb = color
                         cv2.rectangle(img, (x_start, y_start), (x_end, y_end), color, cv2.FILLED)
 
-                        #tested
-
                 # Brush thickness selection logic with borders
                 for thickness_name, (box_start, box_end) in thickness_boxes.items():
                     border_thickness = 6 if selected_thickness == thickness_name else 2
@@ -174,7 +172,6 @@ def gen_frames():
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
