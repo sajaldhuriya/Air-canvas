@@ -153,7 +153,7 @@ This project is protected under the [MIT](https://choosealicense.com/licenses/mi
 
 - **Contributors:**
 - **Sajal Dhuriya**  
- [LinkedIn](https://www.linkedin.com/in/sajal-dhuriya-b2056b272/) | [GitHub]([https://github.com/samudraneel05](https://github.com/sajaldhuriya))
+ [LinkedIn](https://www.linkedin.com/in/sajal-dhuriya-b2056b272/) | [GitHub](https://github.com/sajaldhuriya)
 - **Anshika Pragati**  
  [LinkedIn](https://www.linkedin.com/in/anshika-pragati-4418bb298/) | [GitHub]()
 - **Khyati Jain**  
