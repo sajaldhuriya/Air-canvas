@@ -156,12 +156,13 @@ This project is protected under the [MIT](https://choosealicense.com/licenses/mi
  [LinkedIn](https://www.linkedin.com/in/sajal-dhuriya-b2056b272/) | [GitHub](https://github.com/sajaldhuriya)
 - **Anshika Pragati**  
  [LinkedIn](https://www.linkedin.com/in/anshika-pragati-4418bb298/) | [GitHub]()
+- **Ayush Kushwaha**  
+ [LinkedIn](https://www.linkedin.com/in/ayush-kushwaha-693735225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) | [GitHub](https://github.com/AYUS2307)
 - **Khyati Jain**  
  [LinkedIn](https://www.linkedin.com/in/khyatij/) | [GitHub](https://github.com/kyati001)
 - **Avinash Gupta**  
  [LinkedIn](https://www.linkedin.com/in/avinash-gupta-442469267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ) | [GitHub]()
-- **Ayush Kushwaha**  
- [LinkedIn](https://www.linkedin.com/in/ayush-kushwaha-693735225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) | [GitHub](https://github.com/AYUS2307)
+
 
 - **Inspiration & Contributions:** Thanks to the open-source community for providing robust libraries (such as MediaPipe, OpenCV, and Flask) that made this project possible.
 - **Other Resources:** Special thanks to gesture recognition libraries like [MediaPipe](https://mediapipe.dev/) that enabled the hand gesture-based interface.
