@@ -1,4 +1,4 @@
-# Air Canvas
+# MathVision AI
 
 Built with the tools and technologies:  
 ![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
